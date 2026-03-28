@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katsy - Project Page</title>
+    <style>
+        :root {
+            /* ライトモードの色設定 */
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --accent-color: #007bff;
+            --link-bg: #f0f7ff;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                /* ダークモードの色設定 */
+                --bg-color: #121212;
+                --text-color: #e0e0e0;
+                --accent-color: #00d4ff; /* ダークモードでは少し明るい水色に */
+                --link-bg: #1e1e1e;
+            }
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Inter', "Helvetica Neue", Arial, sans-serif;
+            transition: all 0.4s ease; /* モード切り替えを滑らかに */
+        }
+
+        /* Katsy：ネオン風の大きなロゴ */
+        h1 {
+            color: var(--accent-color);
+            font-size: clamp(4rem, 15vw, 8rem); /* 画面サイズで大きさが変わる */
+            margin: 0;
+            font-weight: 900;
+            letter-spacing: -2px;
+            text-shadow: 0 0 20px rgba(0, 123, 255, 0.2);
+        }
+
+        /* Minecraft配布：洗練されたボタン風リンク */
+        .link-text {
+            margin-top: 3rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            text-decoration: none;
+            padding: 12px 32px;
+            border: 2px solid var(--accent-color);
+            border-radius: 50px;
+            background-color: transparent;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        .link-text:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            box-shadow: 0 0 25px var(--accent-color);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Katsy</h1>
+
+    <a href="https://drive.google.com/drive/folders/1leNOBHwlciL15Sq85ou8nuBf5f1ik_6Q?usp=sharing" class="link-text">
+        Minecraft配布
+    </a>
+
+</body>
+</html>
